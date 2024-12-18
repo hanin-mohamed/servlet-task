@@ -9,7 +9,7 @@ import javax.servlet.http.*;
 @WebServlet("/add-product")
 public class AddProductServlet extends HttpServlet {
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("<h1>Add New Product</h1>");

@@ -15,7 +15,7 @@ public class ProductServlet extends HttpServlet {
     public static List<Product> products = new ArrayList<>();
 
 
-    // intial data
+    // initial data
     @Override
     public void init() throws ServletException {
         super.init();
@@ -32,7 +32,7 @@ public class ProductServlet extends HttpServlet {
         out.println("<h2>Product List</h2>");
         out.println("<ul>");
         for (Product product : products) {
-            out.println("<li>" + product.getName() + " - $" + product.getPrice()
+            out.println("<li>" + product.getName() + "   - $" + product.getPrice()
                     + " | <a href='delete-product'>Delete</a>"
                     + " | <a href='update-product'>Update Price</a></li>");
         }

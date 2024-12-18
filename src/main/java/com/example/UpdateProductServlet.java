@@ -7,7 +7,7 @@ import javax.servlet.http.*;
 
 @WebServlet("/update-product")
 public class UpdateProductServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws  IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
         out.println("<h1>Update Product Price</h1>");
@@ -18,7 +18,7 @@ public class UpdateProductServlet extends HttpServlet {
                 + "</form>");
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
         String name = request.getParameter("name");
         double newPrice = Double.parseDouble(request.getParameter("newPrice"));
 

@@ -6,7 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 @WebServlet("/delete-product")
 public class DeleteProductServlet extends HttpServlet {
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws  IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
@@ -17,7 +17,7 @@ public class DeleteProductServlet extends HttpServlet {
                 + "</form>");
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws  IOException {
         String name = request.getParameter("name");
 
         response.setContentType("text/html");
